@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Asthma CDSS</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            text-align: center;
+        }
+
+        .container {
+            background-color: white;
+            width: 350px;
+            margin: 50px auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: #2c3e50;
+        }
+
+        input {
+            padding: 5px;
+            width: 80%;
+            margin: 5px 0;
+        }
+
+        button {
+            background-color: #3498db;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+
+        .result {
+            margin-top: 15px;
+            font-weight: bold;
+            color: green;
+        }
+
+        .note {
+            font-size: 14px;
+            color: #555;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="container">
+        <h1>Asthma Detection</h1>
+
+        <p class="note">Enter only 1 or 0 (1 = Yes, 0 = No)</p>
+
+        <form action="/predict" method="post">
+
+            Wheezing:<br>
+            <input type="number" name="wheezing" min="0" max="1" required><br>
+
+            Shortness of Breath:<br>
+            <input type="number" name="breathlessness" min="0" max="1" required><br>
+
+            Chest Tightness:<br>
+            <input type="number" name="chest" min="0" max="1" required><br>
+
+            Coughing:<br>
+            <input type="number" name="cough" min="0" max="1" required><br>
+
+            Nighttime Symptoms:<br>
+            <input type="number" name="night" min="0" max="1" required><br><br>
+
+            <button type="submit">Predict</button>
+        </form>
+
+        <div class="result">
+            {{ prediction_text }}
+        </div>
+    </div>
+
+</body>
+</html>
