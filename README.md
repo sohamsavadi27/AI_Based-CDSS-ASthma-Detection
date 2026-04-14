@@ -45,7 +45,7 @@ AI-CDSS-Asthma/
 
 Installation and Setup
 Clone the repository:
-git clone https://github.com/your-username/AI-CDSS-Asthma.git
+git clone https://github.com/sohamsavadi27/AI_Based-CDSS-ASthma-Detection/edit/main
 cd AI-CDSS-Asthma
 Install dependencies:
 pip install -r requirements.txt
