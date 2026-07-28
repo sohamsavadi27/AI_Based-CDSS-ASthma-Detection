@@ -4,8 +4,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                // Replace with your actual GitHub repository URL
-                git 'https://github.com/your-username/python-project.git'
+                git 'https://github.com/sohamsavadi27/AI_Based-CDSS-ASthma-Detection'
             }
         }
         stage('Build') {
