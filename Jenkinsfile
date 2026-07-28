@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/sohamsavadi27/AI_Based-CDSS-ASthma-Detection'
+                git 'https://github.com/sohamsavadi27/AI_Based-CDSS-ASthma-Detection.git'
             }
         }
         stage('Build') {
